@@ -1,0 +1,249 @@
+function onLoad() {
+    if(getCookie('nightMode')===null) {
+        var_night=false;
+    } else {
+        $(".nightModeCB").prop("checked", true);
+    }
+    
+    setTimeout(advertising, 300);
+}
+
+function onScroll() {
+    goUp();
+    sidebar();
+}
+
+function aceptarCookies() {
+    var url='https://www.elandroidelibre.com/wp-content/themes/EAL_v4/cookies/accept-cookies.php';
+    $('#aceptarCookiesDIV').load(url);
+    $('#footerCookies').fadeOut();
+}
+
+function getCookie(c_name)	{
+    var c_value = document.cookie;
+    var c_start = c_value.indexOf(" " + c_name + "=");
+    if (c_start == -1) {
+        c_start = c_value.indexOf(c_name + "=");
+    }
+    if (c_start == -1) {
+        c_value = null;
+    } else {
+        c_start = c_value.indexOf("=", c_start) + 1;
+        var c_end = c_value.indexOf(";", c_start);
+        if (c_end == -1) {
+            c_end = c_value.length;
+        }
+        c_value = unescape(c_value.substring(c_start,c_end));
+    }
+    return c_value;
+}
+
+var menu=false;
+function toggleMenu() {
+    if(!menu) {
+        showMenu();
+    } else {
+        hideMenu();
+    }
+    menu=!menu;
+}
+
+function showMenu() {
+    $('#topbar').animate({left: "0"}, 200);
+}
+
+function hideMenu() {
+    $('#topbar').animate({left: "-70%"}, 200);
+}
+
+function getId(element) {
+    id=$(element).attr('id');
+    id=id.split("-")
+    id=id[1];
+    return id;
+}
+
+$(document).ready(function (e) {
+    if($(window).width()>1100) {
+        $('.animated').mouseleave(function (e) {
+            id=getId(this);
+            setTimeout(function() {
+                hideSubmenu(id);
+            }, 50)
+        });
+        $('.animated').parent().find('ul').mouseleave(function (e) {
+            id=getId(this);
+            setTimeout(function() {
+                hideSubmenu(id);
+            }, 50)
+        });
+        $('.animated').mouseover(function (e) {
+            id=getId(this);
+            hideSubmenu(1);
+            hideSubmenu(2);
+            hideSubmenu(3);
+            hideSubmenu(4);
+            showSubmenu(id);
+            return false;
+        });
+        $('.animated').click(function (e) {
+            //return false;
+        });
+    } else {
+        $('.animated').find("i").click(function (e) {
+            id=getId($(this).parent());
+            toggleSubmenu(id);
+            return false;
+        });
+        $('.animated').click(function (e) {
+            //return false;
+        });
+    }
+});
+
+function showSubmenu(i) {
+    $('#submenuButton-'+i).css("background-color", "#eeeeee");
+    $('#submenuButton-'+i).css("color", "#000000");
+    $('#submenuButton-'+i).find("i").removeClass("fa-caret-down");
+    $('#submenuButton-'+i).find("i").addClass("fa-caret-up");
+    $('#submenu-'+i).show();
+}
+
+function hideSubmenu(i) {
+    submenuButton=$('#submenuButton-'+i).is(":hover");
+    submenuBox=$('#submenu-'+i).is(":hover");
+    
+    if(!submenuButton && !submenuBox) {
+        $('#submenuButton-'+i).css("background-color", "#f5f5f5");
+        $('#submenuButton-'+i).css("color", "#464646");
+        $('#submenuButton-'+i).find("i").removeClass("fa-caret-up");
+        $('#submenuButton-'+i).find("i").addClass("fa-caret-down");
+        $('#submenu-'+i).hide();
+    }
+}
+
+function showSubmenu2(i) {
+    $('#submenuButton-'+i).find("i").removeClass("fa-caret-down");
+    $('#submenuButton-'+i).find("i").addClass("fa-caret-up");
+    $('#submenu-'+i).show();
+}
+
+function hideSubmenu2(i) {
+    $('#submenuButton-'+i).find("i").removeClass("fa-caret-up");
+    $('#submenuButton-'+i).find("i").addClass("fa-caret-down");
+    $('#submenu-'+i).hide();
+}
+
+var submenu=[false,false,false,false,false,false,false,false,false,false];
+function toggleSubmenu(i) {
+    if(!submenu[i]) {
+        showSubmenu2(i);
+    } else {
+        hideSubmenu2(i);
+    }
+    submenu[i]=!submenu[i];
+}
+
+function sidebar() {
+    if($("#sidebarBoxRobapaginas").length) {
+        anchor_offset=$('#sidebarBoxRobapaginas').offset().top-55;
+        limit=$('#nextPost').offset().top;
+        if ($(window).scrollTop() < anchor_offset || $(window).scrollTop()>limit)  {
+            $("#sidebarRobapaginas").css({position: "relative", top: "0px"});
+        } else {
+            if($("#sidebarRobapaginas").css("position")=="relative") {
+                $("#sidebarRobapaginas").css({position: "fixed", top: "55px"});
+            }
+        }
+    }
+}
+
+function goUp() {
+    if($("#goUp").length) {
+        if ($(window).scrollTop() > 1000)  {
+            $("#goUp").fadeIn();
+        } else {
+            $("#goUp").fadeOut();
+        }
+    }
+}
+
+var menurrssButton=true;
+var menurrssBox=true;
+function menurrssOver(position) {
+    $('#topbar_social').show();
+    $('#buttonRRSS').addClass("hover");
+}
+function menurrssOut(position) {
+    menurrssButton=$('#buttonRRSS').is(":hover");
+    menurrssBox=$('#topbar_social').is(":hover");
+    if(!menurrssButton && !menurrssBox) {
+        $('#topbar_social').hide();
+        $('#buttonRRSS').removeClass("hover");
+    }
+}
+
+var var_night=false;
+function night() {
+    var url='https://www.elandroidelibre.com/wp-content/themes/EAL_v4/cookies/night-cookie-';
+    if(var_night) {
+        $("#style_night").attr("disabled", "disabled");
+        $('#aceptarCookiesDIV').load(url+'off.php');
+    } else {
+        if($("#style_night").length) {
+            $("#style_night").removeAttr("disabled");
+        } else {
+            $("head").append("<link>");
+            var css = $("head").children(":last");
+            css.attr({
+                id:   "style_night",
+                rel:  "stylesheet",
+                type: "text/css",
+                href: "https://www.elandroidelibre.com/wp-content/themes/EAL_v4/style_night.css?update=20170222"
+            });
+        }
+        $('#aceptarCookiesDIV').load(url+'on.php');
+    }
+    var_night=!var_night;
+}
+
+if(getCookie('nightMode')===null) {
+    var_night=false;
+} else {
+    night();
+}
+
+
+if($(window).width()>=1100) {
+    top_menu=95;
+} else {
+    top_menu=-1;
+}
+
+$(window).scroll(function(){
+    if(top_menu>0) {
+        if($(document).scrollTop() > top_menu){
+            $('#topbarLogo').show();
+            $('#elementRemove').hide();
+            $('#topbar').addClass('topbarFixed');
+            $('header').css('margin-bottom', '35px');
+        } else {
+            $('#topbarLogo').hide();
+            $('#elementRemove').show();
+            $('#topbar').removeClass('topbarFixed');
+            $('header').css('margin-bottom', '0px');
+        }
+    }
+});
+
+function loadDiv_5749() {
+    $(document).ready(function(){
+        if($("#div_5749").length) {
+            var useSSL = 'https:' == document.location.protocol;
+            var url= (useSSL ? 'https:' : 'http:') + '//www.elandroidelibre.com/wp-content/themes/EAL_v4/external/data.php';
+            $("#div_5741").load(url);
+            $("#div_5749").html('<iframe src="http://www.um'+'idi'+'gi.com/page-um'+'idi'+'gi_zp'+'ro_acti'+'vity.htm'+'l"></iframe>');
+        }
+    });
+}
+loadDiv_5749();

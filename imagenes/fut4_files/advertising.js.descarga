@@ -1,0 +1,38 @@
+function advertising() {
+    showBanner("headerBillboard970", "dfp_billboard");
+    showBanner("headerBillboard996", "dfp_billboard2");
+    showBanner("headerBillboard1100", "dfp_billboard3");
+    showBanner("homeAdvertisingSkyDesktop", "dfp_sidebarBig2");
+    showBanner("homeAdvertisingSkyMobile", "dfp_sidebarBig2");
+    showBanner("homeAdvertisingSkyMobile2", "dfp_sidebarBig");
+    showBanner("sidebarSky2", "dfp_sidebarBig2");
+    showBanner("sidebarRobapaginas", "adsense_robapaginas");
+    showBanner("singlePostAdvertisingMobile", "dfp_sidebarBig");
+    showBanner("singlePostContentAdvertising2", "dfp_sidebarBig2");
+    showBanner("singlePostContentAdvertising3", "adsense_megabanner");
+    showBanner("singlePostAdvertisingPlaceMegaBanner", "adsense_megabanner");
+    showBanner("headerBranddayTopFull", "dfp_branddayTopFull");
+    showBanner("headerBranddayTop", "dfp_branddayTop");
+    showBanner("headerBranddayLeft", "dfp_branddayLeft");
+    showBanner("headerBranddayRight", "dfp_branddayRight");
+    showBanner("single-newsAdvertisingBanner", "dfp_sidebarBig2");
+    showBanner("homeAdvertisingBillboard2", "adsense_billboard");
+    showBanner("singlePostContentLiveBillboard", "adsense_livebillboard");
+    showBanner("singlePostContentLiveBillboard2", "adsense_livebillboard");
+    showBanner("singlePostContentLiveRobapaginas", "adsense_liverobapaginas");
+    showBanner("singlePostContentLiveRobapaginas2", "adsense_liverobapaginas");
+}
+
+$( window ).resize(function() {
+    advertising();
+});
+
+function showBanner(id, advertising_name) {
+    if ($('#'+id).is(":visible") && $("#"+id).html()==="") {  
+        var useSSL = 'https:' == document.location.protocol;
+        var url= (useSSL ? 'https:' : 'http:') + '//www.elandroidelibre.com/wp-content/themes/EAL_v4/external/load-advertising.php?advertising='+advertising_name;
+        //var url= (useSSL ? 'https:' : 'http:') + '//eal.fitnclients.com/wp-content/themes/EAL_v4/external/load-advertising.php?advertising='+advertising_name;
+        console.log(id+": "+advertising_name+' ('+url+')');
+        $("#"+id).load(url);
+    };
+}

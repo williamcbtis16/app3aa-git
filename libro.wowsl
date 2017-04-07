@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VisualLightBox>
+    <Gallery version="2.5">
+        <Settings>
+            <AppName>WOW Slider</AppName>
+            <AppUrlS>WOWSlider.com</AppUrlS>
+            <AppVersion>8.7</AppVersion>
+            <AutoPlay>true</AutoPlay>
+            <AutoPlayVideo>false</AutoPlayVideo>
+            <Captions>true</Captions>
+            <CaptionsEffect>parallax</CaptionsEffect>
+            <Controls>true</Controls>
+            <FontSize>14</FontSize>
+            <FullScreen>false</FullScreen>
+            <GalleryName>libro</GalleryName>
+            <GallerySuffix>1</GallerySuffix>
+            <HtmlCharset>UTF-8</HtmlCharset>
+            <ImageAspectRatio>true</ImageAspectRatio>
+            <ImageEffect>dribbles</ImageEffect>
+            <ImageFillColor>#000000</ImageFillColor>
+            <ImageHeight>360</ImageHeight>
+            <ImageQuality>90</ImageQuality>
+            <ImageShrink2>false</ImageShrink2>
+            <ImageStretch>true</ImageStretch>
+            <ImageTemplate>C:/Program Files (x86)/WOW Slider/templates/backgnd/dodgy/</ImageTemplate>
+            <ImageTemplateName>Dodgy</ImageTemplateName>
+            <ImageWidth>640</ImageWidth>
+            <Images>true</Images>
+            <JoomlaType>2.5</JoomlaType>
+            <OneLoop>false</OneLoop>
+            <OrderRandom>false</OrderRandom>
+            <PlayPause>true</PlayPause>
+            <Preloader>false</Preloader>
+            <PublishFileName>F:/DAM/2do Parcial/aplicaciones/app3/wowslider.html</PublishFileName>
+            <PublishIndex>wowslider.html</PublishIndex>
+            <PublishPath>F:/DAM/2do Parcial/aplicaciones/app3</PublishPath>
+            <PublishPreview>true</PublishPreview>
+            <PublishType>file</PublishType>
+            <RelativePath>false</RelativePath>
+            <ShowBullets>1</ShowBullets>
+            <ShowControls>false</ShowControls>
+            <ShowTooltips>1</ShowTooltips>
+            <SizeStyle>1</SizeStyle>
+            <SlideshowDelay>20</SlideshowDelay>
+            <SlideshowDuration>20</SlideshowDuration>
+            <SoundEnable>0</SoundEnable>
+            <SoundFileName></SoundFileName>
+            <StopOnHover>false</StopOnHover>
+            <SwipeSupport>2</SwipeSupport>
+            <TemplateColor>#47c9af</TemplateColor>
+            <TemplateFont>Indie Flower</TemplateFont>
+            <TemplateName>dodgy</TemplateName>
+            <ThumbAlign>bottom</ThumbAlign>
+            <ThumbFormat>jpg</ThumbFormat>
+            <ThumbHeight>48</ThumbHeight>
+            <ThumbQuality>90</ThumbQuality>
+            <ThumbWidth>0</ThumbWidth>
+            <Thumbnails>false</Thumbnails>
+            <TooltipPos>bottom</TooltipPos>
+            <noFrame>0</noFrame>
+        </Settings>
+        <Images RelativePath="false">
+            <Image>
+                <url>F:/libro/IMG_20170404_121936691.jpg</url>
+                <filesize>969803</filesize>
+            </Image>
+            <Image>
+                <url>F:/libro/IMG_20170404_122032533.jpg</url>
+                <filesize>961222</filesize>
+            </Image>
+            <Image>
+                <url>F:/libro/IMG_20170404_122043369.jpg</url>
+                <filesize>899303</filesize>
+            </Image>
+            <Image>
+                <url>F:/libro/IMG_20170404_122102920.jpg</url>
+                <filesize>970613</filesize>
+            </Image>
+            <Image>
+                <url>F:/libro/IMG_20170404_122118031.jpg</url>
+                <filesize>926159</filesize>
+            </Image>
+            <Image>
+                <url>F:/libro/IMG_20170404_122146614.jpg</url>
+                <filesize>790222</filesize>
+            </Image>
+            <Image>
+                <url>F:/libro/IMG_20170404_122159159.jpg</url>
+                <filesize>964269</filesize>
+            </Image>
+            <Image>
+                <url>F:/libro/IMG_20170404_122224754.jpg</url>
+                <filesize>782593</filesize>
+            </Image>
+            <Image>
+                <url>F:/libro/IMG_20170404_122245999.jpg</url>
+                <filesize>850499</filesize>
+            </Image>
+            <Image>
+                <url>F:/libro/IMG_20170404_122256503.jpg</url>
+                <filesize>922305</filesize>
+            </Image>
+            <Image>
+                <url>F:/libro/IMG_20170404_122314334.jpg</url>
+                <filesize>954017</filesize>
+            </Image>
+        </Images>
+    </Gallery>
+</VisualLightBox>

@@ -1,0 +1,8 @@
+(function(w, d) {
+var p = (w._ttp = (w._ttp || {}))[63859] = [];
+var ps = (w._tts = (w._tts || {}));
+;p.push({"pid":68810,"css":"margin: 17px 0px 17px 7.71875px;","format":"inread","slot":{"selector":"#singlePost #singlePostContent > p","minimum":2}});ps[68810]={"slider":{"allow_corner_position":false,"allow_top_position":false}};
+var s = d.createElement('script'); s.async = true;
+s.src = 'https://cdn.teads.tv/media/format/v3/teads-format.min.js';
+d.body.appendChild(s);
+})(window, document);

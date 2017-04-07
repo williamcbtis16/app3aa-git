@@ -1,0 +1,596 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tercera aplicación movil</title>
+
+<!--grupo CSS-->
+<link rel="stylesheet" href="css/tema-app3.min.css"/>
+<link rel="stylesheet" href="css/jquery.mobile.icons-1.4.5.min.css"/>
+<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css"/>
+<!--grupo JavaScript-->
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/jquery.mobile-1.4.5.min.js"></script>
+<script src="js/acciones.js"></script>
+<script src="phonegap.js"></script>
+
+<!-- Start WOWSlider.com HEAD section -->
+<link rel="stylesheet" type="text/css" href="engine1/style.css" />
+<script type="text/javascript" src="engine1/jquery.js"></script>
+<!-- End WOWSlider.com HEAD section -->
+<script type="text/javascript">
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+</script>
+</head>
+
+<body onLoad="MM_preloadImages('imagenes/img2.png','../../../../libro/IMG_20170404_122229376.jpg','../../../../libro/IMG_20170404_122204593.jpg','../../../../libro/IMG_20170404_122211414.jpg','../../../../libro/IMG_20170404_122001057.jpg','../../../../libro/IMG_20170404_122250696.jpg','../../../../libro/IMG_20170404_122302523.jpg','../../../../libro/IMG_20170404_122150906.jpg','../../../../libro/IMG_20170404_122123110.jpg','../../../../libro/IMG_20170404_122109676.jpg','../../../../libro/IMG_20170404_122051640.jpg','../../../../libro/IMG_20170404_122026765.jpg')">
+
+<div data-role="page" id="Principal" data-theme="d">
+<div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+<h1> Bibliografía Programación </h1>
+  </div>
+  
+      <div data-role="main" class="ui-content">
+     <div>
+     </div></div>
+      <ul data-role="listview" data-theme="d" class="ui-listview ui-group-theme-d">
+      <li class="ui-first-child ui-last-child">
+         <a href="#Pagina1" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+         
+           <h2> Sistemas operativos </h2>
+           <p> Jesús Carretero Perez </p>
+        </a>
+        </li>
+          <li class="ui-first-child ui-last-child">
+             <a href="#Pagina2" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+                 <h2> Fundamentos de Redes </h2>
+                 <p> Bruce Hallberg </p>
+            </a>
+        </li>                 <li class="ui-first-child ui-last-child">
+
+              <a href="#Pagina3" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+                      <h2> Redes de Computadoras </h2>
+                      <p> Andrew S. Tanenbaum </p>
+          </a>
+        </li>
+                   <li class="ui-first-child ui-last-child">
+                     <a href="#Pagina4" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+                        <h2> Java Cómo Programar </h2>
+                        <p> Hervey M. Deitel </p>
+                     </a>
+                   </li>
+                  <li class="ui-first-child ui-last-child">
+                     <a href="#Pagina5" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+                         <h2> Visual C# 2010 </h2>
+                          <p> John Sharp </p>
+                     </a>
+        </li>
+           <li class="ui-first-child ui-last-child">
+                     <a href="#Pagina6" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+                         <h2> Programación Avanzada con Microsoft SQL Server 2005 </h2>
+                          <p> Andrew J. Brust </p>
+                     </a>
+        </li>
+           <li class="ui-first-child ui-last-child">
+                     <a href="#Pagina7" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+                         <h2> ASP.NET 4.0 </h2>
+                          <p> George Shepherd </p>
+                     </a>
+        </li>
+           <li class="ui-first-child ui-last-child">
+                     <a href="#Pagina8" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+                         <h2> Estructuras de Datos </h2>
+                          <p> Osvaldo Cairo </p>
+                     </a>
+        </li>
+           <li class="ui-first-child ui-last-child">
+                     <a href="#Pagina9" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+                         <h2> Programación en Java </h2>
+                          <p> C. Thomas Wu</p>
+                     </a>
+        </li>
+           <li class="ui-first-child ui-last-child">
+                     <a href="#Pagina10" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+                         <h2> Comunicaciones y Redes de Computadoras </h2>
+                          <p> William Stallings </p>
+                     </a>
+        </li>
+           <li class="ui-first-child ui-last-child">
+                     <a href="#Pagina11" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+                         <h2> Mantenimiento y reparación de Computadoras </h2>
+                          <p> Muestra lo que esta por venir de los telefonos mas adelante </p>
+                     </a>
+        </li>
+      
+			
+  </ul>
+       
+       
+      <!-- Start WOWSlider.com BODY section -->
+<div id="wowslider-container1">
+<div class="ws_images"><ul>
+		<li><img src="data1/images/img_20170404_121936691.jpg" alt="IMG_20170404_121936691" title="IMG_20170404_121936691" id="wows1_0"/></li>
+		<li><img src="data1/images/img_20170404_122032533.jpg" alt="IMG_20170404_122032533" title="IMG_20170404_122032533" id="wows1_1"/></li>
+		<li><img src="data1/images/img_20170404_122043369.jpg" alt="IMG_20170404_122043369" title="IMG_20170404_122043369" id="wows1_2"/></li>
+		<li><img src="data1/images/img_20170404_122102920.jpg" alt="IMG_20170404_122102920" title="IMG_20170404_122102920" id="wows1_3"/></li>
+		<li><img src="data1/images/img_20170404_122118031.jpg" alt="IMG_20170404_122118031" title="IMG_20170404_122118031" id="wows1_4"/></li>
+		<li><img src="data1/images/img_20170404_122146614.jpg" alt="IMG_20170404_122146614" title="IMG_20170404_122146614" id="wows1_5"/></li>
+		<li><img src="data1/images/img_20170404_122159159.jpg" alt="IMG_20170404_122159159" title="IMG_20170404_122159159" id="wows1_6"/></li>
+		<li><img src="data1/images/img_20170404_122216462.jpg" alt="IMG_20170404_122216462" title="IMG_20170404_122216462" id="wows1_7"/></li>
+		<li><img src="data1/images/img_20170404_122224754.jpg" alt="IMG_20170404_122224754" title="IMG_20170404_122224754" id="wows1_8"/></li>
+		<li><a href="http://wowslider.net"><img src="data1/images/img_20170404_122245999.jpg" alt="jquery slideshow" title="IMG_20170404_122245999" id="wows1_9"/></a></li>
+		<li><img src="data1/images/img_20170404_122256503.jpg" alt="IMG_20170404_122256503" title="IMG_20170404_122256503" id="wows1_10"/></li>
+	</ul></div>
+	<div class="ws_bullets"><div>
+		<a href="#" title="IMG_20170404_121936691"><span><img src="data1/tooltips/img_20170404_121936691.jpg" alt="IMG_20170404_121936691"/>1</span></a>
+		<a href="#" title="IMG_20170404_122032533"><span><img src="data1/tooltips/img_20170404_122032533.jpg" alt="IMG_20170404_122032533"/>2</span></a>
+		<a href="#" title="IMG_20170404_122043369"><span><img src="data1/tooltips/img_20170404_122043369.jpg" alt="IMG_20170404_122043369"/>3</span></a>
+		<a href="#" title="IMG_20170404_122102920"><span><img src="data1/tooltips/img_20170404_122102920.jpg" alt="IMG_20170404_122102920"/>4</span></a>
+		<a href="#" title="IMG_20170404_122118031"><span><img src="data1/tooltips/img_20170404_122118031.jpg" alt="IMG_20170404_122118031"/>5</span></a>
+		<a href="#" title="IMG_20170404_122146614"><span><img src="data1/tooltips/img_20170404_122146614.jpg" alt="IMG_20170404_122146614"/>6</span></a>
+		<a href="#" title="IMG_20170404_122159159"><span><img src="data1/tooltips/img_20170404_122159159.jpg" alt="IMG_20170404_122159159"/>7</span></a>
+		<a href="#" title="IMG_20170404_122216462"><span><img src="data1/tooltips/img_20170404_122216462.jpg" alt="IMG_20170404_122216462"/>8</span></a>
+		<a href="#" title="IMG_20170404_122224754"><span><img src="data1/tooltips/img_20170404_122224754.jpg" alt="IMG_20170404_122224754"/>9</span></a>
+		<a href="#" title="IMG_20170404_122245999"><span><img src="data1/tooltips/img_20170404_122245999.jpg" alt="IMG_20170404_122245999"/>10</span></a>
+		<a href="#" title="IMG_20170404_122256503"><span><img src="data1/tooltips/img_20170404_122256503.jpg" alt="IMG_20170404_122256503"/>11</span></a>
+	</div></div><div class="ws_script" style="position:absolute;left:-99%"><a href="http://wowslider.net">http://wowslider.net/</a> by WOWSlider.com v8.7</div>
+<div class="ws_shadow"></div>
+</div>	
+<script type="text/javascript" src="engine1/wowslider.js"></script>
+<script type="text/javascript" src="engine1/script.js"></script>
+<!-- End WOWSlider.com BODY section -->
+ <div data-role="footer" align="center" data-theme="d" data-position="fixed">
+                     <div>
+                     
+                        <img src="imagenes/logo3.png" width="46" height="46">
+                     </div>
+                        <div>
+                          <h4> Aplicación Tres </h4>
+                          <h4> William Paul Corona Cano </h4>
+                     
+                     </div>
+  </div><!--footer-->
+</div> <!--page principal-->
+  </div>
+  </div><!--main-->
+  
+  
+                  
+<div data-role="page" id="Pagina1" data-add-back-btn="true" data-theme="d">
+                          <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="d">
+                          <h1> Sistemas operativos </h1>
+                          </div>
+                          <div data-role="main" class="ui-content" align="center">
+                          <div>
+                            <h2 class="a1"> <span class="a2"> La mayoría de los libros de sistemas operativos incluye gran cantidad de teoría general y aspectos de diseño, pero no muestra claramente cómo se usan. Este libro está pensado como un texto general de sistemas operativos, pudiendo cubrir tanto la parte introductoria como los aspectos de diseño de los mismos. El libro incluye cuadros de texto resaltados donde se muestran consejos de programación, advertencias de uso, ideas sobre presentaciones, etc. Estos cuadros reflejan la experiencia de los autores en el uso y en la docencia de sistemas operativos. La utilización de una interfaz de programación de sistemas operativos para POSIX y Windows 2003, con ejemplos de uso de las mismas permite que el lector, no sólo conozca los principios teóricos, sino cómo se aplican en sistemas operativos reales. Cada capítulo incluye problemas y ejercicios con diferentes grados de dificultad para adecuarse a los distintos tipos de cursos en que se puede usar este libro. </span></h2>
+                            </div>
+                          </div>
+                          <Center>
+                            <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('a1234','','../../../../libro/IMG_20170404_122229376.jpg',1)"><img src="../../../../libro/IMG_20170404_122224754.jpg" name="a1234" width="245" height="435" id="a1234"></a>
+                          </Center>
+                            <div data-role="main" class="ui-content">
+                          <div data-role="collapsible" data-content-theme="false">
+        <a href="https://mx.casadellibro.com/libro-sistemas-operativos-2-ed/9788448156435/1138038" target="new"> Comprar Libro </a>
+        <p></p>
+         <a href="http://www.pedrobeltrancanessa.com/Sistemas_OperativosLibro__Una_Vision_Aplicada__Carretero_Jess.pdf" target="new"> Descargar Libro </a>
+          <h1> Descargar o Comprar Libro </h1>
+                          </div>
+      </div>
+      <h2><img src="../../../../libro/i1.png" width="475" height="481">
+      <p></p>
+      <img src="../../../../libro/i2.png" width="473" height="666">
+      <p></p>
+      <img src="../../../../libro/i3.png" width="474" height="647">
+      <p></p>
+      <img src="../../../../libro/i4.png" width="474" height="624">
+      <p></p>
+      <img src="../../../../libro/i5.png" width="485" height="639"> 
+      <p></p>
+      <img src="../../../../libro/i6.png" width="481" height="649"> 
+      <p></p>
+      <img src="../../../../libro/i7.png" width="489" height="629"> 
+      <p></p>
+      <img src="../../../../libro/i8.png" width="488" height="596">
+      <p></p>
+      <img src="../../../../libro/i9.png" width="500" height="485"> </h2>
+<div data-role="footer" data-theme="d" data-position="fixed">
+    <h4> Aplicacion Tres, WPCC </h4>
+  </div>
+</div>
+                        
+                          
+<div data-role="page" id="Pagina2" data-add-back-btn="true" data-theme="d">
+                            <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="d">
+                            <h1> Fundamentos de Redes</h1>
+                            </div>
+                            <div data-role="content" align="center">
+                            <div>
+                               <h2> Aprenda los fundamentos de la tecnología de conectividad alámbrica e inalámbrica con esta guía introductoria. Dentro de ella encontrará detalle a fondo acerca del diseño y configuración de redes, del hardware, protocolos de conectividad de redes, seguridad, respaldo, recuperación y más. Después de estudiar los fundamentos, el libro explica, paso a paso, cómo instalar, configurar y administrar Windows Server 2003, Windows 2000 Server, Linux y Apache. Totalmente actualizado para estudiar las tecnologías más recientes, es el recurso ideal para cualquier persona que apenas esté comenzando una carrera en conectividad de redes o buscando un curso de repaso.  </h2></div>
+  </div>
+                               <Center>
+                                 <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image37','','../../../../libro/IMG_20170404_122204593.jpg',1)"><img src="../../../../libro/IMG_20170404_122159159.jpg" name="Image37" width="245" height="435" id="Image37"></a>
+                             </Center>
+                              <div data-role="main" class="ui-content">
+                          <div data-role="collapsible" data-content-theme="false">
+        <a href="https://mx.casadellibro.com/libro-fundamentos-de-redes/9789701058961/1108282" target="new"> Comprar Libro </a>
+        <p></p>
+         <a href="http://www.freelibros.org/redes/fundamentos-de-redes-4ta-edicion-bruce-hallberg.html" target="new"> Descargar Libro </a>
+          <h1> Comprar o Descargar Libro </h1>
+          <p>&nbsp;</p>
+                          </div>
+      </div>
+        <h2><img src="../../../../libro/a1.png" width="475" height="481">
+      <p></p>
+      <img src="../../../../libro/a2.png" width="473" height="666">
+      <p></p>
+      <img src="../../../../libro/a3.png" width="474" height="647">
+      <p></p>
+      <img src="../../../../libro/a4.png" width="474" height="624">
+      <p></p>
+      <img src="../../../../libro/a5.png" width="485" height="639"> 
+      <p></p>
+      <img src="../../../../libro/a6.png" width="481" height="649"> 
+      <p></p>
+      <img src="../../../../libro/a7.png" width="489" height="629"> 
+      <p></p>
+      <img src="../../../../libro/a8.png" width="488" height="596">
+      <p></p>
+      <img src="../../../../libro/a9.png" width="473" height="430"> </h2>
+<div data-role="footer" data-theme="d" data-position="fixed">
+    <h4> Aplicacion Tres, WPCC </h4>
+  </div>
+</div>
+                            
+                            
+<div data-role="page" id="Pagina3" data-add-back-btn="true" data-theme="d">
+                            <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="d">
+                               <h1> Redes de Computadoras </h1>
+    </div>
+                            <div data-role="content" align="center">
+                            <div>
+                               <h2> La presente es la cuarta edición de este libro. Cada edición ha correspondido a una fase diferente de la manera en que se usaron las redes de computadoras. Cuando apareció la primera edición, en
+
+1980, las redes eran una curiosidad académica. Para la segunda edición, en 1988, las redes ya se usaban en universidades y en grandes empresas. Y en 1996, cuando se editó por tercera vez este libro, las redes de computadoras, en particular Internet, se habían convertido en una realidad cotidiana para millones de personas. El elemento nuevo de la cuarta edición es el rápido crecimiento de las redes inalámbricas en muchas formas.
+
+El panorama de las redes ha cambiado radicalmente desde la tercera edición. A mediados de la década de 1990 existían varios tipos de LANs y WANs, junto con pilas de múltiples protocolos.
+
+Para el 2003, la única LAN alámbrica de amplio uso tal vez sea Ethernet y prácticamente todas las WANs estarían en Internet. En consecuencia, se habrá eliminado una gran cantidad de material referente a estas antiguas redes. </h2></div>
+  </div>
+  
+                               <Center>
+                  <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image33','','../../../../libro/IMG_20170404_122211414.jpg',1)"><img src="../../../../libro/li.jpg" name="Image33" width="288" height="512" id="Image33"></a>
+                  </Center>
+<div data-role="main" class="ui-content">
+          <div data-role="collapsible" data-content-theme="false">
+        <a href="https://mx.casadellibro.com/libro-redes-de-computadoras-4-ed/9789702601623/918118" target="new"> Comprar Libro </a>
+        <p></p>
+         <a href="http://www.freelibros.org/redes/redes-de-computadoras-4ta-edicion-andrew-s-tanenbaum-2.html" target="new"> Descargar Libro </a>
+          <h1> Comprar o Descargar Libro </h1>
+          <p>&nbsp;</p>
+                          </div>
+      </div>
+       <h2><img src="../../../../libro/b1.png" width="475" height="481">
+      <p></p>
+      <img src="../../../../libro/b2.png" width="473" height="666">
+      <p></p>
+      <img src="../../../../libro/b3.png" width="474" height="647">
+      <p></p>
+      <img src="../../../../libro/b4.png" width="474" height="624">
+      <p></p>
+      <img src="../../../../libro/b5.png" width="485" height="639"> 
+      <p></p>
+      <img src="../../../../libro/b6.png" width="481" height="649"> 
+      <p></p>
+      <img src="../../../../libro/b7.png" width="489" height="629"> 
+      <p></p>
+      <img src="../../../../libro/b8.png" width="488" height="596">
+      <p></p>
+      <img src="../../../../libro/b9.png" width="473" height="430"> 
+       <p></p>
+      <img src="../../../../libro/b10.png" width="473" height="430"> 
+       <p></p>
+      <img src="../../../../libro/b11.png" width="473" height="430"> </h2>
+      
+      
+      
+                                <div data-role="footer" data-theme="d" data-position="fixed">
+                                  <h4> Aplicacion Tres WPCC </h4>
+                                </div>
+</div>
+                             
+                              
+<div data-role="page" id="Pagina4" data-add-back-btn="true" data-theme="d">
+<div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="d">
+                                <h1> Java Como Programar </h1>
+  </div>
+                            <div data-role="content" align="center">
+                            <div>
+                               <h2>
+Encuadernación: Tapa blanda
+Editorial: PRENTICE HALL MEXICO
+Lengua: CASTELLANO
+ISBN: 9789702611905
+Una introducción completa y autorizada del código activo de Deitel a la programación orientada a objetos, con la nueva edición Java Standard Edition 6, JDBC 4, Java Server Faces y Servicios Web.¡Java es el lenguaje de programación orientada a objetos más popular, con cinco millones de desarrolladores!Esta nueva edición del libro de texto sobre Java más utilizado en el mundo emplea un método anticipado para las clases y objetos. Incluye también una cobertura completa de la programación orientada a objetos en Java, para lo cual presenta varios ejemplos prácticos integrados: la clase Tiempo, la clase Empleado, la clase LibroCalificaciones, un ejemplo práctico opcional de DOO/UML 2 con el ATM, el ejemplo práctico opcional de GUI y gráficos, un libro de direcciones controlado por base de datos: una libreta de direcciones que utiliza controles JSF habilitados para AJAX para mostrar un nombre y una dirección en un Mapa de Google, y un sistema de reservaciones de una aerolínea que utiliza servicios Web. </h2></div>
+  </div>
+  
+                               <Center>
+                                 <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image30','','../../../../libro/IMG_20170404_122001057.jpg',1)"><img src="../../../../libro/javacomoprogramar1.jpg" name="Image30" width="288" height="512" id="Image30"></a>
+                  </Center>
+<div data-role="main" class="ui-content">
+          <div data-role="collapsible" data-content-theme="false">
+        <a href="https://mx.casadellibro.com/libro-como-programar-en-java-7-ed/9789702611905/1223777" target="new"> Comprar Libro </a>
+        <p></p>
+         <a href="https://www.fiuxy.co/ti-programacion-webmasters/4191894-como-programar-en-java-deitel-7-y-9-edicion-pdf.html" target="new"> Descargar Libro </a>
+          <h1> Comprar o Descargar Libro </h1>
+          <p>&nbsp;</p>
+          
+                          </div>
+      </div>         
+       <h2><img src="../../../../libro/s1.png" width="535" height="1293"> </h2>          
+  <div data-role="footer" data-theme="d" data-position="fixed">
+                                  <h4> Aplicacion Tres, WPCC </h4>
+  </div>
+</div>
+</div>
+</div>
+<div data-role="page" id="Pagina5" data-add-back-btn="true" data-theme="d">
+<div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="d">
+                <h1> Visual C# 2010 </h1>
+                                      </div>
+                                       <div data-role="content" align="center">
+                                          <div>
+                               <h2>
+Microsoft Visual C# es un lenguaje de programación sencillo pero potente, destinado sobre todo a los desarrolladores de aplicaciones que utilicen Microsoft .NET Framework. Hereda muchas de las mejores características de C++ y de Microsoft Visual Basic, pero sin casi ninguno de sus anacronismos e inconsistencias; lo que da lugar a un lenguaje más claro y lógico. En este libro aprenderá paso a paso a construir aplicaciones con Visual C# 2010 y Microsoft .NET Framework 4.0. Es una guía idónea para aquéllos que cuentan con conocimientos básicos de programación, quienes encontrarán numerosos ejercicios y ejemplos prácticos que les permitirán dominar todas las características del lenguaje C# y crear aplicaciones y componentes para Windows.</h2></div>
+  </div>
+  
+                               <Center>
+                                 <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image28','','../../../../libro/IMG_20170404_122250696.jpg',1)"><img src="../../../../libro/vi2010.jpg" name="Image28" width="288" height="512" id="Image28"></a>
+                               </Center>
+<div data-role="main" class="ui-content">
+          <div data-role="collapsible" data-content-theme="false">
+        <a href="https://mx.casadellibro.com/libro-visual-c-2010-paso-a-paso/9788441528246/1805674" target="new"> Comprar Libro </a>
+        <p></p>
+         <a href="http://www.freelibros.org/manual/c-experimente-todo-el-poder-de-visual-studio-2010-users.html" target="new"> Descargar Libro </a>
+          <h1> Comprar o Descargar Libro </h1>
+          <p>&nbsp;</p>
+          
+                          </div>
+      </div>  
+      
+      <h2><img src="../../../../libro/c1.png" width="475" height="481">
+      <p></p>
+      <img src="../../../../libro/c2.png" width="473" height="666">
+      <p></p>
+      <img src="../../../../libro/c3.png" width="474" height="647"></h2>                 
+<div data-role="footer" data-theme="d" data-position="fixed">
+ 
+                                  <h4> Aplicacion Tres WPCC </h4>
+                                </div>
+       </div>
+<div data-role="page" id="Pagina6" data-add-back-btn="true" data-theme="d">
+                            <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="d">
+                               <h1> Programación Avanzada con Microsoft SQL Server 2005 </h1>
+    </div>
+                            <div data-role="content" align="center">
+                            <div>
+                               <h2> Obtenga la información directa que necesita para aprender las características de la programación en SQL Server 2005. Ofrece ejemplos prácticos, modelos de código para ayudar a diseñar y desarrollar aplicaciones bases de datos y soluciones inteligentes de negocios.</h2></div>
+  </div>
+  
+                               <Center>
+                                 <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image29','','../../../../libro/IMG_20170404_122302523.jpg',1)"><img src="../../../../libro/2005.jpg" name="Image29" width="288" height="512" id="Image29"></a>
+    </Center>
+<div data-role="main" class="ui-content">
+          <div data-role="collapsible" data-content-theme="false">
+        <a href="https://mx.casadellibro.com/libro-programacion-avanzada-con-sql-server-2005/9789701058930/1157586" target="new"> Comprar Libro </a>
+        <p></p>
+         <a href="https://msdn.microsoft.com/es-es/library/ms345154(v=sql.90).aspx" target="new"> Descargar Libro </a>
+          <h1> Comprar o Descargar Libro </h1>
+          <p>&nbsp;</p>
+                          </div>
+      </div>
+      
+       <h2><img src="../../../../libro/t1.png" width="523" height="534">
+      
+                                <div data-role="footer" data-theme="d" data-position="fixed">
+                                  <h4> Aplicacion Tres WPCC </h4>
+                                </div>
+</div>      
+
+<div data-role="page" id="Pagina7" data-add-back-btn="true" data-theme="d">
+                            <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="d">
+                               <h1> ASP.NET 4.0 </h1>
+    </div>
+                            <div data-role="content" align="center">
+                            <div>
+                               <h2> El desarrollo Web ha recorrido un largo camino desde que empezaron a crearse los primeros sitios en Internet. ASP.NET ha evolucionado hasta convertirse en una de las plataformas más consistentes, estables y ricas en características a la hora de gestionar peticiones HTTP. ASP.NET 4.0 junto con Visual Studio 2010, incluyen nuevas características y herramientas que facilitarán el trabajo del desarrollador Web como la funcionalidad de enrutamiento de URL integrada, mayor control sobre WiewState y Client IDs, Soporte mejorado para ASP.NET Dynamic Data y mejoras en SEO entre otras. Este libro le mostrará cómo desarrollar aplicaciones Web utilizando la versión más actual de la plataforma de procesamiento de peticiones HTTP de Microsoft: ASP.NET 4.0.</h2></div>
+  </div>
+  
+                               <Center>
+                                 <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image31','','../../../../libro/IMG_20170404_122150906.jpg',1)"><img src="../../../../libro/asp.jpg" name="Image31" width="288" height="512" id="Image31"></a>
+    </Center>
+<div data-role="main" class="ui-content">
+          <div data-role="collapsible" data-content-theme="false">
+        <a href="https://mx.casadellibro.com/libro-aspnet-40/9788441528123/1798954" target="new"> Comprar Libro </a>
+        <p></p>
+         <a href="http://oscarmartin.org/net/libro-gratuito-de-asp-net-4-0/" target="new"> Descargar Libro </a>
+          <h1> Comprar o Descargar Libro </h1>
+          <p>&nbsp;</p>
+                          </div>
+      </div>
+      
+  <h2><img src="../../../../libro/d1.png" width="475" height="481">
+      <p></p>
+      <img src="../../../../libro/d2.png" width="473" height="666">
+      <p></p>
+      <img src="../../../../libro/d3.png" width="474" height="647">
+      <p></p>
+      <img src="../../../../libro/d4.png" width="474" height="624">
+      <p></p>
+      <img src="../../../../libro/d5.png" width="485" height="639"> 
+      <p></p>
+      <img src="../../../../libro/d6.png" width="481" height="649"> 
+      <p></p>
+      <img src="../../../../libro/d7.png" width="489" height="629"> 
+      <p></p>
+      <img src="../../../../libro/d8.png" width="488" height="596">
+      <p></p>
+      <img src="../../../../libro/d9.png" width="473" height="430"> 
+    <p><img src="../../../../libro/d10.png" width="473" height="430"></p>
+      </h2> 
+     
+      
+                                <div data-role="footer" data-theme="d" data-position="fixed">
+                                  <h4> Aplicacion Tres WPCC </h4>
+                                </div>
+</div>      
+<div data-role="page" id="Pagina8" data-add-back-btn="true" data-theme="d">
+                            <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="d">
+                               <h1> Estructuras de Datos  </h1>
+    </div>
+                            <div data-role="content" align="center">
+                            <div>
+                               <h2>Este libro tiene como finalidad presentar las estructuras de datos, asi como los algoritmos necesarios para tratarlas. El lenguaje utilizado es algorítmico, escrito en seudo código, independiente de cualquier lenguaje comercial de programación, lo que permite comprender las estructuras de datos y los algoritmos asociados a ellas sin relacionarlos con un lenguaje de programación específico. De esta manera el lector podrá aplicar lo que aquí aprenda a cualquier lenguaje de programación. La generalidad con la uqe se explican los conceptos y sus posibles aplicaciones facilitan, incluso, la implementación en lenguajes estructurados o en lenguajes orientados a objetos.</h2></div>
+  </div>
+  
+                               <Center>
+                                 <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image32','','../../../../libro/IMG_20170404_122123110.jpg',1)"><img src="../../../../libro/estruc.jpg" name="Image32" width="288" height="512" id="Image32"></a>
+    </Center>
+<div data-role="main" class="ui-content">
+          <div data-role="collapsible" data-content-theme="false">
+        <a href="https://mx.casadellibro.com/libro-estructura-de-datos/9789701059081/1099527" target="new"> Comprar Libro </a>
+        <p></p>
+         <a href="http://www.freelibros.org/programacion/estructuras-de-datos-3ra-edicion-osvaldo-cairo-y-silvia-guardati.html" target="new"> Descargar Libro </a>
+          <h1> Comprar o Descargar Libro </h1>
+          <p>&nbsp;</p>
+                          </div>
+      </div>
+      
+       <h2><img src="../../../../libro/e1.png" width="475" height="481">
+      <p></p>
+      <img src="../../../../libro/e2.png" width="473" height="666">
+      <p></p>
+      <img src="../../../../libro/e3.png" width="474" height="647">
+      <p></p>
+      <img src="../../../../libro/e4.png" width="474" height="624">
+      <p></p>
+      <img src="../../../../libro/e5.png" width="485" height="639"> </h2>
+      
+                                <div data-role="footer" data-theme="d" data-position="fixed">
+                                  <h4> Aplicacion Tres WPCC </h4>
+                                </div>
+</div>      
+
+<div data-role="page" id="Pagina9" data-add-back-btn="true" data-theme="d">
+                            <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="d">
+                               <h1> Programación en Java   </h1>
+    </div>
+                            <div data-role="content" align="center">
+                            <div>
+                               <h2>Wu alcanza con éxito el objetivo de enseñar programación orientada a objetos y ofrece a los estudiantes la información y práctica necesaria para programar en el mundo real. Para ello, presenta el concepto de objeto en los primeros programas y utiliza un conjunto de clases predefinidas (el paquete javabook) que permite a los estudiantes a empezar a programar con objetos.
+Las figuras son la característica fundamental de este libro. Utiliza numerosas ilustraciones para explicar conceptos fundamentales como la herencia y sus muchos diagramas de objetos muestran las relaciones entre objetos y clases. Su enfoque visual se ha mejorado en esta edición utilizando un segundo color, que proporciona a las figuras una mayor capacidad pedagógica.</h2></div>
+  </div>
+  
+                               <Center>
+                                 <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image34','','../../../../libro/IMG_20170404_122109676.jpg',1)"><img src="../../../../libro/ori.jpg" name="Image34" width="288" height="512" id="Image34"></a>
+  </Center>
+<div data-role="main" class="ui-content">
+          <div data-role="collapsible" data-content-theme="false">
+        <a href="https://mx.casadellibro.com/libro-introduccion-a-la-programacion-orientada-a-objetos-con-java/9788448131944/771061" target="new"> Comprar Libro </a>
+        <p></p>
+         <a href="http://www.juntos.gob.pe/modulos/mod_legal/archivos/1NTR0DUCC10N%20%204%20L4%209R06R4M4C10N%20C0N%20J4V4.pdf" target="new"> Descargar Libro </a>
+          <h1> Comprar o Descargar Libro </h1>
+          <p>&nbsp;</p>
+                          </div>
+      </div>
+      
+  <h2><img src="../../../../libro/f1.png" width="582" height="530">
+      <p></p>
+      <img src="../../../../libro/f2.png" width="583" height="689">
+      <p></p>
+      <img src="../../../../libro/f3.png" width="609" height="697">
+    <p></p>
+      <img src="../../../../libro/f4.png" width="592" height="673"></h2>
+                                <div data-role="footer" data-theme="d" data-position="fixed">
+                                  <h4> Aplicacion Tres WPCC </h4>
+                                </div>
+</div>        
+<div data-role="page" id="Pagina10" data-add-back-btn="true" data-theme="d">
+                            <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="d">
+                               <h1>Comunicaciones y Redes de Computadoras    </h1>
+    </div>
+                            <div data-role="content" align="center">
+                            <div>
+                               <h2>En esta nueva edición, se incorporan los últimos cambios y avances que han ido apareciendo en esta área en los últimos años, manteniendo tanto una visión de conjunto como de fácil comprensión de todo el campo de Comunicaciones y Redes.</h2></div>
+  </div>
+  
+                               <Center>
+                                 <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image35','','../../../../libro/IMG_20170404_122051640.jpg',1)"><img src="../../../../libro/com.jpg" name="Image35" width="288" height="512" id="Image35"></a>
+  </Center>
+<div data-role="main" class="ui-content">
+          <div data-role="collapsible" data-content-theme="false">
+        <a href="https://mx.casadellibro.com/libro-comunicaciones-y-redes-de-computadores-7-ed/9788420541105/967475" target="new"> Comprar Libro </a>
+        <p></p>
+         <a href="http://www.freelibros.org/redes/comunicaciones-y-redes-de-computadores-7ma-edicion-william-stallings.html" target="new"> Descargar Libro </a>
+          <h1> Comprar o Descargar Libro </h1>
+          <p>&nbsp;</p>
+                          </div>
+      </div>
+      
+       <h2><img src="../../../../libro/g1.png" width="582" height="2734">
+      <p></p>
+      <img src="../../../../libro/g2.png" width="582" height="2734">
+      <p></p>
+       <img src="../../../../libro/g3.png" width="582" height="1313">
+                                <div data-role="footer" data-theme="d" data-position="fixed">
+                                  <h4> Aplicacion Tres WPCC </h4>
+  </div>
+</div>                          
+                       
+<div data-role="page" id="Pagina11" data-add-back-btn="true" data-theme="d">
+                            <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="d">
+                               <h1>Mantenimiento y reparación de Computadoras    </h1>
+    </div>
+                            <div data-role="content" align="center">
+                            <div>
+                               <h2>Llevar a cabo las principales operaciones de mantenimiento y de reparación de una computadora será algo muy sencillo siguiendo paso a paso las instrucciones de este completo manual, que incluye más de 500 imágenes ilustrativas.</h2></div>
+  </div>
+  
+                               <Center>
+                                 <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image36','','../../../../libro/IMG_20170404_122026765.jpg',1)"><img src="../../../../libro/man.jpg" name="Image36" width="288" height="512" id="Image36"></a>
+  </Center>
+<div data-role="main" class="ui-content">
+          <div data-role="collapsible" data-content-theme="false">
+        <a href="http://articulo.mercadolibre.com.mx/MLM-552398943-libro-mantenimiento-y-reparacion-de-computadoras-_JM" target="new"> Comprar Libro </a>
+        <p></p>
+         <a href="http://www.grupocultural.com/catalogo-grupo-cultural-detalle.php?id=91&id_categoria=14" target="new"> Descargar Libro </a>
+          <h1> Comprar o Descargar Libro </h1>
+          <p>&nbsp;</p>
+                          </div>
+      </div>
+      
+                                <div data-role="footer" data-theme="d" data-position="fixed">
+                                  <h4> Aplicacion Tres WPCC </h4>
+                                </div>
+</div>                                                                                                                                                                                                         
+</body>
+</html>
